@@ -1,0 +1,22 @@
+<p>listado de flores !</p>
+
+<div *ngIf="Florborrado; else noBorrado">
+    <h3>Flor borrada:<small>{{Florborrado}}</small></h3>
+
+</div>
+<ng-template  #noBorrado>
+    <h3>No ha borrado nada</h3>
+
+</ng-template>
+
+<button (click)="borrarFlores()">
+    borrar
+</button>
+
+
+<!-- directiva de *ngFor  para recorrer un arreglo o una lista-->
+<ul>
+    <li *ngFor="let flores of flores; let i=index">
+        {{i+1}} - {{flores}}
+    </li>
+</ul>
